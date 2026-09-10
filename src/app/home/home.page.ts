@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonRange, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonRange, IonButton } from '@ionic/angular';
 import { OrcamentoService } from '../services/orcamento.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
-  standalone: true,
+  standalone: false,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonRange, IonButton, CommonModule, FormsModule]
 })
 export class HomePage {
