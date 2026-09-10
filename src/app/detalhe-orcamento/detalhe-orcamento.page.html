@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Detalhes do Orçamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" *ngIf="orcamento">
+  <ion-card>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label>Valor da Diária: <strong>R$ {{ orcamento.valorDiaria | number:'1.2-2' }}</strong></ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Quantidade de Dias: <strong>{{ orcamento.dias }}</strong></ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label color="success">
+          <h2>Total a Pagar: <strong>R$ {{ orcamento.valorTotal | number:'1.2-2' }}</strong></h2>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" color="medium" (click)="voltar()" class="ion-margin-top">
+    VOLTAR
+  </ion-button>
+  <ion-button expand="block" color="success" (click)="confirmar()" class="ion-margin-top">
+    CONFIRMAR
+  </ion-button>
+</ion-content>

@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'confirmacao-reserva',
+    loadChildren: () => import('./confirmacao-reserva/confirmacao-reserva.module').then( m => m.ConfirmacaoReservaPageModule)
+  },
+  {
+    path: 'detalhe-orcamento',
+    loadChildren: () => import('./detalhe-orcamento/detalhe-orcamento.module').then( m => m.DetalheOrcamentoPageModule)
+  },
+  {
+    path: 'lista-orcamentos',
+    loadChildren: () => import('./lista-orcamentos/lista-orcamentos.module').then( m => m.ListaOrcamentosPageModule)
+  },
 ];
 
 @NgModule({

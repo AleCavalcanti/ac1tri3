@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Orçamentos Salvos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list *ngIf="listaOrcamentos.length > 0; else semDados">
+    <ion-item *ngFor="let item of listaOrcamentos">
+      <ion-label>
+        <h2>Total: <strong>R$ {{ item.valorTotal | number:'1.2-2' }}</strong></h2>
+        <p>Diária: R$ {{ item.valorDiaria | number:'1.2-2' }} | {{ item.dias }} dias</p>
+        <p *ngIf="item.dataHora"><small>Data: {{ item.dataHora }}</small></p>
+      </ion-label>
+      <ion-button slot="end" color="danger" fill="clear" (click)="excluir(item.id)">
+        EXCLUIR
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ng-template #semDados>
+    <p class="ion-text-center">Nenhum orçamento salvo no dispositivo.</p>
+  </ng-template>
+  <ion-button expand="block" color="medium" (click)="voltar()" class="ion-margin-top">
+    VOLTAR
+  </ion-button>
+</ion-content>

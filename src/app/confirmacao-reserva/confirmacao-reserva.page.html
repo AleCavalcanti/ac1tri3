@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Reserva Solicitada</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" *ngIf="orcamento">
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <h3>SUA RESERVA ESTÁ AGENDADA. AGUARDANDO O PAGAMENTO DE R$ {{ orcamento.valorTotal | number:'1.2-2' }} PARA
+        CONFIRMAR SUA ESTADIA CONOSCO!</h3>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" color="primary" (click)="verLista()" class="ion-margin-top">
+    VER LISTA DE ORÇAMENTOS
+  </ion-button>
+  <ion-button expand="block" color="secondary" (click)="novaReserva()" class="ion-margin-top">
+    NOVA RESERVA
+  </ion-button>
+</ion-content>
