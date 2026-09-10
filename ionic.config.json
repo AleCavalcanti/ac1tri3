@@ -1,0 +1,7 @@
+{
+  "name": "ac1tri3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
