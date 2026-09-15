@@ -8,7 +8,6 @@ import { OrcamentoService } from '../services/orcamento.service';
   selector: 'app-home',
   templateUrl: './home.page.html',
   standalone: false,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonRange, IonButton, CommonModule, FormsModule]
 })
 export class HomePage {
   valorDiaria: number = 100;

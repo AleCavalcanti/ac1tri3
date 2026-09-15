@@ -7,7 +7,6 @@ import { OrcamentoService, Orcamento } from '../services/orcamento.service';
   selector: 'app-confirmacao-reserva',
   templateUrl: './confirmacao-reserva.page.html',
   standalone: false,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardContent, IonButton, CommonModule]
 })
 export class ConfirmacaoReservaPage implements OnInit {
   orcamento: Orcamento | null = null;

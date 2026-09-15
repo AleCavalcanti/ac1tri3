@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardContent, IonItem, IonLabel, IonButton } from '@ionic/angular';
 import { OrcamentoService, Orcamento } from '../services/orcamento.service';
 @Component({
   selector: 'app-detalhe-orcamento',
   templateUrl: './detalhe-orcamento.page.html',
-  standalone: false,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardContent, IonItem, IonLabel, IonButton, CommonModule]
+  standalone: false
 })
 export class DetalheOrcamentoPage implements OnInit {
   orcamento: Orcamento | null = null;
